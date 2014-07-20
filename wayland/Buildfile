@@ -1,0 +1,23 @@
+# Description: Wayland Protocol Library
+# URL: http://wayland.freedesktop.org
+
+name=wayland
+version=1.5.0
+release=1
+source=(http://wayland.freedesktop.org/releases/$name-$version.tar.xz)
+
+build() {
+   cd $name-$version
+
+   ./configure --prefix=$SYSROOT/usr \
+               --disable-static \
+               --disable-documentation \
+               --enable-scanner
+
+   make -j $JOBS
+   make DESTDIR=$PKG install
+
+}
+
+# Add checks for libffi and expat here
+# ldconfig -p | grep libffi
