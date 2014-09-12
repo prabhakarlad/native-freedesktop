@@ -2,7 +2,7 @@
 # URL: http://wayland.freedesktop.org
 
 name=wayland
-version=1.5.0
+version=1.5.93
 release=1
 source=(http://wayland.freedesktop.org/releases/$name-$version.tar.xz)
 
