@@ -2,7 +2,7 @@
 # URL: http://wayland.freedesktop.org
 
 name=wayland
-version=1.6.0
+version=1.7.0
 release=1
 source=(http://wayland.freedesktop.org/releases/$name-$version.tar.xz)
 
@@ -16,7 +16,6 @@ build() {
 
    make -j $JOBS
    make DESTDIR=$PKG install
-
 }
 
 # Add checks for libffi and expat here
